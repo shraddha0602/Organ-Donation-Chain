@@ -1,0 +1,71 @@
+{
+  "name": "hospitalRegister",
+  "description": "A transaction named hospitalRegister",
+  "plural": "hospitalRegister",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true,
+    "composer": {
+      "type": "transaction",
+      "namespace": "org.organ.net",
+      "name": "hospitalRegister",
+      "fqn": "org.organ.net.hospitalRegister",
+      "abstract": false
+    }
+  },
+  "properties": {
+    "$class": {
+      "type": "string",
+      "default": "org.organ.net.hospitalRegister",
+      "required": false,
+      "description": "The class identifier for this type"
+    },
+    "hospitalId": {
+      "type": "string",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "required": true
+    },
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "organName": {
+      "type": [
+        "string"
+      ],
+      "enum": [
+        "EYE",
+        "KIDNEY",
+        "HEART",
+        "LUNGS",
+        "TISSUE"
+      ],
+      "default": [],
+      "required": false
+    },
+    "transactionId": {
+      "type": "string",
+      "id": true,
+      "description": "The instance identifier for this type",
+      "required": false,
+      "generated": true
+    },
+    "timestamp": {
+      "type": "date",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": [],
+  "forceId": true
+}

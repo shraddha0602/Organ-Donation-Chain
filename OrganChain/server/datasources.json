@@ -1,0 +1,12 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "composer": {
+    "name": "composer",
+    "connector": "loopback-connector-composer",
+    "card": "admin@organ-donation-chain",
+    "namespaces": false
+  }
+}

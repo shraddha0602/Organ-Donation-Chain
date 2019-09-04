@@ -1,0 +1,94 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "db"
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "System": {
+    "dataSource": "composer",
+    "public": true
+  },
+  "PingResponse": {
+    "dataSource": "composer",
+    "public": false
+  },
+  "Organ": {
+    "dataSource": "composer",
+    "public": true
+  },
+  "reportDonor": {
+    "dataSource": "composer",
+    "public": true
+  },
+  "reportRecipient": {
+    "dataSource": "composer",
+    "public": true
+  },
+  "Donor": {
+    "dataSource": "composer",
+    "public": true
+  },
+  "Recipient": {
+    "dataSource": "composer",
+    "public": true
+  },
+  "Hospital": {
+    "dataSource": "composer",
+    "public": true
+  },
+  "donorOrganRegister": {
+    "dataSource": "composer",
+    "public": true
+  },
+  "recipientRegister": {
+    "dataSource": "composer",
+    "public": true
+  },
+  "hospitalRegister": {
+    "dataSource": "composer",
+    "public": true
+  },
+  "organTestedReportPrepared": {
+    "dataSource": "composer",
+    "public": true
+  },
+  "recipientReportPrepared": {
+    "dataSource": "composer",
+    "public": true
+  },
+  "Transferred": {
+    "dataSource": "composer",
+    "public": true
+  }
+}

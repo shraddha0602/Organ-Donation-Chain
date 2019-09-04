@@ -1,0 +1,46 @@
+{
+  "name": "Transferred",
+  "description": "A transaction named Transferred",
+  "plural": "Transferred",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true,
+    "composer": {
+      "type": "transaction",
+      "namespace": "org.organ.net",
+      "name": "Transferred",
+      "fqn": "org.organ.net.Transferred",
+      "abstract": false
+    }
+  },
+  "properties": {
+    "$class": {
+      "type": "string",
+      "default": "org.organ.net.Transferred",
+      "required": false,
+      "description": "The class identifier for this type"
+    },
+    "organ": {
+      "type": "any",
+      "description": "The identifier of an instance of organ",
+      "required": true
+    },
+    "transactionId": {
+      "type": "string",
+      "id": true,
+      "description": "The instance identifier for this type",
+      "required": false,
+      "generated": true
+    },
+    "timestamp": {
+      "type": "date",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": [],
+  "forceId": true
+}

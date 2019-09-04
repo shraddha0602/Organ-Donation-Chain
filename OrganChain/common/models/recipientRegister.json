@@ -1,0 +1,85 @@
+{
+  "name": "recipientRegister",
+  "description": "A transaction named recipientRegister",
+  "plural": "recipientRegister",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true,
+    "composer": {
+      "type": "transaction",
+      "namespace": "org.organ.net",
+      "name": "recipientRegister",
+      "fqn": "org.organ.net.recipientRegister",
+      "abstract": false
+    }
+  },
+  "properties": {
+    "$class": {
+      "type": "string",
+      "default": "org.organ.net.recipientRegister",
+      "required": false,
+      "description": "The class identifier for this type"
+    },
+    "adharID": {
+      "type": "string",
+      "required": true
+    },
+    "fname": {
+      "type": "string",
+      "required": true
+    },
+    "lname": {
+      "type": "string",
+      "required": true
+    },
+    "organName": {
+      "type": "string",
+      "enum": [
+        "EYE",
+        "KIDNEY",
+        "HEART",
+        "LUNGS",
+        "TISSUE"
+      ],
+      "required": true
+    },
+    "age": {
+      "type": "number",
+      "required": true
+    },
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "contact": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "required": true
+    },
+    "hospital": {
+      "type": "any",
+      "description": "The identifier of an instance of hospital",
+      "required": true
+    },
+    "transactionId": {
+      "type": "string",
+      "id": true,
+      "description": "The instance identifier for this type",
+      "required": false,
+      "generated": true
+    },
+    "timestamp": {
+      "type": "date",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": [],
+  "forceId": true
+}

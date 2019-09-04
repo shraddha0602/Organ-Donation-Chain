@@ -1,0 +1,54 @@
+{
+  "name": "reportRecipient",
+  "description": "An asset named reportRecipient",
+  "plural": "reportRecipient",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true,
+    "composer": {
+      "type": "asset",
+      "namespace": "org.organ.net",
+      "name": "reportRecipient",
+      "fqn": "org.organ.net.reportRecipient",
+      "abstract": false
+    }
+  },
+  "properties": {
+    "$class": {
+      "type": "string",
+      "default": "org.organ.net.reportRecipient",
+      "required": false,
+      "description": "The class identifier for this type"
+    },
+    "reportRecipientId": {
+      "type": "string",
+      "id": true,
+      "description": "The instance identifier for this type",
+      "required": true
+    },
+    "hash": {
+      "type": "string",
+      "required": true
+    },
+    "recipient": {
+      "type": "any",
+      "description": "The identifier of an instance of recipient",
+      "required": true
+    },
+    "hospital": {
+      "type": "any",
+      "description": "The identifier of an instance of hospital",
+      "required": true
+    },
+    "donorHospital": {
+      "type": "any",
+      "description": "The identifier of an instance of donorHospital",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}

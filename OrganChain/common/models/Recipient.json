@@ -1,0 +1,95 @@
+{
+  "name": "Recipient",
+  "description": "A participant named Recipient",
+  "plural": "Recipient",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true,
+    "composer": {
+      "type": "participant",
+      "namespace": "org.organ.net",
+      "name": "Recipient",
+      "fqn": "org.organ.net.Recipient",
+      "abstract": false
+    }
+  },
+  "properties": {
+    "$class": {
+      "type": "string",
+      "default": "org.organ.net.Recipient",
+      "required": false,
+      "description": "The class identifier for this type"
+    },
+    "adharID": {
+      "type": "string",
+      "id": true,
+      "description": "The instance identifier for this type",
+      "required": true
+    },
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string",
+      "required": true
+    },
+    "age": {
+      "type": "number",
+      "required": true
+    },
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "contact": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "required": true
+    },
+    "organName": {
+      "type": "string",
+      "enum": [
+        "EYE",
+        "KIDNEY",
+        "HEART",
+        "LUNGS",
+        "TISSUE"
+      ],
+      "required": true
+    },
+    "got_organ": {
+      "type": "boolean",
+      "default": "false",
+      "required": true
+    },
+    "report": {
+      "type": "any",
+      "description": "The identifier of an instance of report",
+      "required": false
+    },
+    "organ": {
+      "type": "any",
+      "description": "The identifier of an instance of organ",
+      "required": false
+    },
+    "hospital": {
+      "type": "any",
+      "description": "The identifier of an instance of hospital",
+      "required": true
+    },
+    "reportDonor": {
+      "type": "any",
+      "description": "The identifier of an instance of reportDonor",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}

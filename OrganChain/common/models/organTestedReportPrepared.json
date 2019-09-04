@@ -1,0 +1,55 @@
+{
+  "name": "organTestedReportPrepared",
+  "description": "A transaction named organTestedReportPrepared",
+  "plural": "organTestedReportPrepared",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true,
+    "composer": {
+      "type": "transaction",
+      "namespace": "org.organ.net",
+      "name": "organTestedReportPrepared",
+      "fqn": "org.organ.net.organTestedReportPrepared",
+      "abstract": false
+    }
+  },
+  "properties": {
+    "$class": {
+      "type": "string",
+      "default": "org.organ.net.organTestedReportPrepared",
+      "required": false,
+      "description": "The class identifier for this type"
+    },
+    "hash": {
+      "type": "string",
+      "required": true
+    },
+    "organ": {
+      "type": "any",
+      "description": "The identifier of an instance of organ",
+      "required": true
+    },
+    "donor": {
+      "type": "any",
+      "description": "The identifier of an instance of donor",
+      "required": true
+    },
+    "transactionId": {
+      "type": "string",
+      "id": true,
+      "description": "The instance identifier for this type",
+      "required": false,
+      "generated": true
+    },
+    "timestamp": {
+      "type": "date",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": [],
+  "forceId": true
+}

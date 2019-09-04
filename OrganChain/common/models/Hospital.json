@@ -1,0 +1,61 @@
+{
+  "name": "Hospital",
+  "description": "A participant named Hospital",
+  "plural": "Hospital",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true,
+    "composer": {
+      "type": "participant",
+      "namespace": "org.organ.net",
+      "name": "Hospital",
+      "fqn": "org.organ.net.Hospital",
+      "abstract": false
+    }
+  },
+  "properties": {
+    "$class": {
+      "type": "string",
+      "default": "org.organ.net.Hospital",
+      "required": false,
+      "description": "The class identifier for this type"
+    },
+    "hospitalId": {
+      "type": "string",
+      "id": true,
+      "description": "The instance identifier for this type",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "required": true
+    },
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "organName": {
+      "type": [
+        "string"
+      ],
+      "enum": [
+        "EYE",
+        "KIDNEY",
+        "HEART",
+        "LUNGS",
+        "TISSUE"
+      ],
+      "default": [],
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}

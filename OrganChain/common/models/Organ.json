@@ -1,0 +1,89 @@
+{
+  "name": "Organ",
+  "description": "An asset named Organ",
+  "plural": "Organ",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true,
+    "composer": {
+      "type": "asset",
+      "namespace": "org.organ.net",
+      "name": "Organ",
+      "fqn": "org.organ.net.Organ",
+      "abstract": false
+    }
+  },
+  "properties": {
+    "$class": {
+      "type": "string",
+      "default": "org.organ.net.Organ",
+      "required": false,
+      "description": "The class identifier for this type"
+    },
+    "organId": {
+      "type": "string",
+      "id": true,
+      "description": "The instance identifier for this type",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "enum": [
+        "EYE",
+        "KIDNEY",
+        "HEART",
+        "LUNGS",
+        "TISSUE"
+      ],
+      "required": true
+    },
+    "Added": {
+      "type": "boolean",
+      "required": true
+    },
+    "addTime": {
+      "type": "string",
+      "required": true
+    },
+    "Tested": {
+      "type": "boolean",
+      "default": "false",
+      "required": true
+    },
+    "testTime": {
+      "type": "string",
+      "default": "Not Updated",
+      "required": true
+    },
+    "Transplanted": {
+      "type": "boolean",
+      "default": "false",
+      "required": true
+    },
+    "transplantTime": {
+      "type": "string",
+      "default": "Not Updated",
+      "required": true
+    },
+    "donor": {
+      "type": "any",
+      "description": "The identifier of an instance of donor",
+      "required": true
+    },
+    "hospital": {
+      "type": "any",
+      "description": "The identifier of an instance of hospital",
+      "required": true
+    },
+    "recipient": {
+      "type": "any",
+      "description": "The identifier of an instance of recipient",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}

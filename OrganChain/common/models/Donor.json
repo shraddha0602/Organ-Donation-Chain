@@ -1,0 +1,88 @@
+{
+  "name": "Donor",
+  "description": "A participant named Donor",
+  "plural": "Donor",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true,
+    "composer": {
+      "type": "participant",
+      "namespace": "org.organ.net",
+      "name": "Donor",
+      "fqn": "org.organ.net.Donor",
+      "abstract": false
+    }
+  },
+  "properties": {
+    "$class": {
+      "type": "string",
+      "default": "org.organ.net.Donor",
+      "required": false,
+      "description": "The class identifier for this type"
+    },
+    "adharID": {
+      "type": "string",
+      "id": true,
+      "description": "The instance identifier for this type",
+      "required": true
+    },
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string",
+      "required": true
+    },
+    "age": {
+      "type": "number",
+      "required": true
+    },
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "contact": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "required": true
+    },
+    "name": {
+      "type": [
+        "string"
+      ],
+      "enum": [
+        "EYE",
+        "KIDNEY",
+        "HEART",
+        "LUNGS",
+        "TISSUE"
+      ],
+      "default": [],
+      "required": false
+    },
+    "hospital": {
+      "type": "any",
+      "description": "The identifier of an instance of hospital",
+      "required": true
+    },
+    "report": {
+      "type": "any",
+      "description": "The identifier of an instance of report",
+      "required": false
+    },
+    "reportRecipient": {
+      "type": "any",
+      "description": "The identifier of an instance of reportRecipient",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}
