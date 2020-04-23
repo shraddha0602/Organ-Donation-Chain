@@ -44,7 +44,7 @@ To get the organ needed by the patient,  the recipient’s hospital,  broadcasts
 <img src="OrganChain/client/screenshots/donorApi.png" width="70%">
 
 ### Historian
-The historian records is the ledger we are maintaining using the blockchain.  It is an immutable and tamper proof records which are stored in the blockchain. It maintains all the records regarding the transactions performed in the network and all the commitment to the ledger.
+The historian records is the ledger we are maintaining using the blockchain.  It is an immutable and tamper proof records which are stored in the blockchain. It maintains all the records regarding the transactions performed in the network and all the commitment to the ledger. \
 <img src="OrganChain/client/screenshots/historianweb.png" width="70%">
 
 
